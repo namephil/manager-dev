@@ -1,0 +1,16 @@
+.basic{
+    background-color: aquamarine;
+    width: 500px;
+}
+.ant-row{
+    display: flex;
+    justify-content: center;
+}
+.ant-form-item-control-input-content{
+    display: flex;
+    justify-content: center;
+}
+
+.ant-input{
+    
+}

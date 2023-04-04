@@ -1,0 +1,79 @@
+const data = [
+    {
+        id:1,
+        title:'阿里云',
+        list:[
+            {
+                key:0,
+                num:'default',
+                pretext:'无',
+                location:'',
+                EndPoint:'https://file',
+                AccessKeyId:'minio',
+                default:true,
+            },
+            {
+                key:1,
+                num:'FILE-DEV',
+                pretext:'无',
+                location:'',
+                EndPoint:'https://file.sdlg.cn',
+                AccessKeyId:'minioadmin',
+                default:false,
+            }
+        ]
+
+    },
+    {
+        id:2,
+        title:'华为云',
+        list:[
+            {
+                key:0,
+                num:'default',
+                pretext:'无',
+                location:'',
+                EndPoint:'https://file',
+                AccessKeyId:'minioadmin',
+                default:true,
+            },
+            {
+                key:1,
+                num:'default',
+                pretext:'无',
+                location:'',
+                EndPoint:'https://file.sdlg.cn',
+                AccessKeyId:'minio',
+                default:true,
+            },
+            {
+                key:2,
+                num:'FILE-DEV',
+                pretext:'无',
+                location:'',
+                EndPoint:'https://file.sdlg.cn',
+                AccessKeyId:'minioadmin',
+                default:false,
+            }
+        ]
+
+    },
+    {
+        id:1,
+        title:'本地',
+        list:[
+            {
+                key:0,
+                num:'FILE-DEV',
+                pretext:'无',
+                location:'',
+                EndPoint:'https://file',
+                AccessKeyId:'minio',
+                default:false,
+            }
+        ]
+
+    }
+]
+
+export default data

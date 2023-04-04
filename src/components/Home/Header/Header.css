@@ -1,0 +1,24 @@
+.Headcontainer{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+}
+.headerBox{
+    width: 100%;
+    height: 50px;
+    background-color: lightgoldenrodyellow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.rightHead{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.itemhead{
+    margin-left: 20px;
+    margin-right: 20px;
+}
