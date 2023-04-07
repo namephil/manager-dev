@@ -7,7 +7,7 @@
 .menue{
     width: 300px;
     height: 40px;
-    background-color: aqua;
+    /* background-color: aqua; */
     display: flex;
     justify-content: space-around;
     align-items: center;

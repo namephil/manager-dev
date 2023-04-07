@@ -13,7 +13,6 @@ export class Formbody extends Component {
       isModalOpen: false,
       currentIndex:0,
       data: data,
-      tempKey:0,
       newData:[
         {
           key:0,
@@ -56,31 +55,29 @@ export class Formbody extends Component {
   };
   
   handleFilter(key){
-    this.setState({tempKey: key})
     const temp = [...this.state.newData]
     const tempList = temp.filter((item) => item.key === key);
     this.setState({showData: tempList}) 
   }
-  // 点击确认
   handleOk(){
     this.setState({
       isModalOpen: false
     })
     console.log(this.state.showData)
-    this.setState({
-      newData: this.state.newData.map(item => item.key === this.state.tempKey? {...item, ...this.state.showData[0]}: {...item, ...item})
-    },()=>{
-      console.log(this.state.newData)
-    })
   }
     //添加一行数据
   componentDidMount(){
     //  订阅，将订阅的事件取一个名字，当组件卸载的时候进行清除
       this.Token = PubSub.subscribe('newItem',(msg,data)=>{
+      // console.log('我是header里面得到的数据',msg,data)
       const temp = [...this.state.newData]
+      console.log(typeof this.state.newData)
+      // temp['key'] = 
       temp.push(data)
       this.setState({
         newData: temp
+      },()=>{
+        console.log('添加后的newData是',this.state.newData)
       })
     })
   }
@@ -96,6 +93,8 @@ export class Formbody extends Component {
     const keyName = e.target.name
     this.setState({
       showData: this.state.showData.map((item, index) => index === 0 ?{...item, [keyName]: e.target.value}: '')
+    }, ()=>{
+      console.log(this.state.showData)
     })
   }
   render() {

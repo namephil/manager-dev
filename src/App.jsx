@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import 'antd/dist/reset.css';
-// import Login from './components/Login';
-
+import Login from './components/Login';
+// import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css'
-import Dialog from './components/Dialog/Dialog';
-// import Home from './components/Home';
+import Home from './components/Home'
 
 export class App extends Component {
   constructor(){
@@ -54,12 +53,8 @@ export class App extends Component {
   render() {
     return (
         <div className='App'>
-          {/* <div className='leftBox'>左侧盒子</div>
-          <div className='rightBox'>
-            <Login className="loginForm"/>
-          </div> */}
-          {/* <Home /> */}
-          <Dialog list={this.state.list[0]}/>
+          {/* <Login className="loginForm"/> */}
+          <Home />
         </div>
     )
   }

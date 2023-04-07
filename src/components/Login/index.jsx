@@ -1,11 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Button, Form, Input } from 'antd';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import 'antd/dist/reset.css';
 import './style.css'
 
-export class Login extends Component {
-  render() {
+
+export default function Login() {
+    const handleLogin = () =>{
+      console.log('点击登录了')
+    }
     return (
         <Form
         className='basic'
@@ -22,8 +25,6 @@ export class Login extends Component {
         initialValues={{
           remember: true,
         }}
-        // onFinish={onFinish}
-        // onFinishFailed={onFinishFailed}
         autoComplete="off"
       >
         <Form.Item
@@ -36,7 +37,9 @@ export class Login extends Component {
             },
           ]}
         >
-          <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" />
+          <Input 
+            prefix={<UserOutlined className="site-form-item-icon" />}
+            placeholder="Username" />
         </Form.Item>
     
         <Form.Item
@@ -59,7 +62,7 @@ export class Login extends Component {
         <Form.Item
         className='item loginbtn'
         >
-          <Button type="primary" htmlType="submit" style={{ width: '100%' }}>
+          <Button type="primary" htmlType="submit" style={{ width: '100%' }} onClick={() => handleLogin()}>
             登录
           </Button>
         </Form.Item>
@@ -72,7 +75,5 @@ export class Login extends Component {
         </Form.Item>
       </Form>
     )
-  }
+  
 }
-
-export default Login

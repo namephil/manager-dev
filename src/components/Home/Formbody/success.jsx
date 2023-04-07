@@ -77,10 +77,15 @@ export class Formbody extends Component {
   componentDidMount(){
     //  订阅，将订阅的事件取一个名字，当组件卸载的时候进行清除
       this.Token = PubSub.subscribe('newItem',(msg,data)=>{
+      // console.log('我是header里面得到的数据',msg,data)
       const temp = [...this.state.newData]
+      console.log(typeof this.state.newData)
+      // temp['key'] = 
       temp.push(data)
       this.setState({
         newData: temp
+      },()=>{
+        console.log('添加后的newData是',this.state.newData)
       })
     })
   }
